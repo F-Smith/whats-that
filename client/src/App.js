@@ -34,8 +34,16 @@ const GlobalStyle = createGlobalStyle`
     @import url("https://fonts.googleapis.com/css?family=Nunito:200,400,600");
     font-family: 'Nunito', sans-serif;
   }
+  canvas {
+    border: 1px solid rgba(255,255,255,1);
+    background-color: #533497;
+  }
   * {
     box-sizing: border-box;
+  }
+  .countdown-timer {
+    font-size: 2.6rem;
+    margin-top: -10px;
   }
   .gameHeader {
     font-size: 2rem;

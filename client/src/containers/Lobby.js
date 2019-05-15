@@ -5,13 +5,11 @@ import { connect } from "react-redux";
 import * as Actions from "../redux/actions/index";
 
 // Component & Container Imports
-import AvatarShelf from "../components/AvatarShelf";
 import Button from "../components/Button";
 import Canvas from "../components/Canvas";
 import GameHeader from "../components/GameHeader";
 import PlayerAvatar from "../components/PlayerAvatar";
 import PlayerList from "../components/PlayerList";
-import PlayerListItem from "../components/PlayerListItem";
 import Wrapper from "../components/Wrapper";
 
 export const Lobby = props => {
@@ -30,11 +28,18 @@ export const Lobby = props => {
       <Canvas />
       <p>Waiting for other players...</p>
       <PlayerList>
-        <PlayerListItem>
-          <PlayerAvatar info={props.beAvatar} />
-        </PlayerListItem>
+        <PlayerAvatar info={props.beAvatar} />
+        <PlayerAvatar />
+        <PlayerAvatar />
+        <PlayerAvatar />
+        <PlayerAvatar />
       </PlayerList>
-      <AvatarShelf>Your Opponents</AvatarShelf>
+
+      <p>
+        TODO: DON'T RENDER GOOGLEGUESS IN THE LOBBY DUE TO SPACE CONSTRAINTS AND
+        ENSURE THAT START BUTTON BELOW IS DISPLAYING FOR GAME CREATOR.
+      </p>
+
       {props.isCreator === "createGame" ? (
         <Button primary onClick={startGame}>
           {" "}

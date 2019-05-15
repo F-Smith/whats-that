@@ -2,18 +2,28 @@ import styled, { css } from "styled-components/macro";
 
 const GameHeader = styled.div`
   align-items: center;
-  background-color: #6a43c2;
   color: white;
   display: flex;
   justify-content: center;
-  padding: 20px 0;
+  padding: 20px 0 10px 0;
   width: 100%;
 
   ${props =>
-    props.timer &&
+    props.canYouDraw &&
     css`
-      justify-content: flex-start;
-      padding: 1vh 4vw;
+      flex-direction: column;
+
+      p {
+        margin: 0;
+        padding: 0;
+      }
+      h2 {
+        font-size: 2rem;
+        letter-spacing: 2px;
+        margin: 10px;
+        padding: 0;
+        text-transform: uppercase;
+      }
     `}
 `;
 

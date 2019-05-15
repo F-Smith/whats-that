@@ -1,9 +1,13 @@
 import React from "react";
 
-// Component & Container Imports
-import Button from "./Button";
+// Redux Imports
 import { connect } from "react-redux";
 import * as Actions from "../redux/actions/index";
+
+// Component & Container Imports
+import Button from "./Button";
+import GuessBox from "../components/GuessBox";
+
 import quickdrawSvgRender from "../utils/quickdrawSvgRender/quickdrawSvgRender";
 
 // arol tip: useReducer instead of having this mess of variables here.
@@ -47,7 +51,7 @@ const postDrawing = setWAYD => {
 const Canvas = props => {
   const [locations, setLocations] = React.useState([]);
   const canvasRef = React.useRef(null);
-  const [WAYD, setWAYD] = React.useState("Draw something...");
+  const [WAYD, setWAYD] = React.useState("Trying to guess...");
   React.useEffect(() => {
     const canvas = canvasRef.current;
     const ctx = canvas.getContext("2d");
@@ -152,30 +156,24 @@ const Canvas = props => {
     const canvas = canvasRef.current;
     const ctx = canvas.getContext("2d");
     ctx.clearRect(0, 0, canvas.width, canvas.height);
-    setWAYD("Draw something...");
+    setWAYD("Trying to guess...");
     setLocations([]);
   };
 
   return (
     <>
-      <canvas
-        ref={canvasRef}
-        onClick={handleCanvasClick}
-        style={{
-          border: "1px solid rgba(255,255,255,1)",
-          backgroundColor: "#533497"
-        }}
-      />
+      <canvas ref={canvasRef} onClick={handleCanvasClick} />
       <Button clear onClick={handleClear}>
         <i className="far fa-trash-alt" />
       </Button>
-      {WAYD !== "Draw something..." ? (
-        <h4>
-          {WAYD === "Draw something..." ? "" : "Is it... "}
-          {WAYD === "Draw something..." ? "" : WAYD}
-          {WAYD === "Draw something..." ? "" : "?"}
-        </h4>
-      ) : null}
+      <GuessBox>
+        {WAYD !== "Trying to guess..." ? (
+          <h4>{"Is it" + WAYD + "?"}</h4>
+        ) : (
+          // replace with null
+          WAYD
+        )}
+      </GuessBox>
     </>
   );
 };

@@ -1,11 +1,8 @@
 import styled, { css } from "styled-components/macro";
 
-const PlayerList = styled.ul`
-  align-items: flex-end;
+const PlayerList = styled.div`
   display: flex;
-  flex-wrap: wrap;
   list-style-type: none;
-  padding-inline-start: 0;
 
   ${props =>
     props.betweenRounds &&

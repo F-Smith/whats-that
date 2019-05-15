@@ -13,13 +13,6 @@ const GameName = styled.div`
   width: 100%;
 
   ${props =>
-    props.timer &&
-    css`
-      width: 25%
-      font-size: 1rem;
-    `}
-
-  ${props =>
     props.betweenRounds &&
     css`
       width: 100%;
