@@ -16,7 +16,7 @@
     "koa": "^2.7.0",
     "koa-body": "^4.1.0",
     "koa-router": "^7.4.0",
-    "lodash": "^4.17.11",
+    "lodash": "^4.17.13",
     "node-fetch": "^2.5.0",
     "redux": "^4.0.1",
     "socket.io": "^2.2.0",
