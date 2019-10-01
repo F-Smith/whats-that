@@ -4,18 +4,18 @@
   "private": true,
   "dependencies": {
     "avataaars": "^1.2.1",
-    "react": "^16.8.6",
+    "react": "^16.10.1",
     "react-countdown-now": "^2.1.0",
-    "react-dom": "^16.8.6",
+    "react-dom": "^16.10.1",
     "react-dom-confetti": "^0.1.0",
     "react-pose": "^4.0.8",
     "react-pose-text": "^3.1.0",
-    "react-redux": "^7.0.3",
-    "react-router-dom": "^5.0.0",
-    "react-scripts": "3.0.0",
+    "react-redux": "^7.1.1",
+    "react-router-dom": "^5.1.2",
+    "react-scripts": "3.1.2",
     "redux": "^4.0.1",
-    "socket.io-client": "^2.2.0",
-    "styled-components": "^4.2.0"
+    "socket.io-client": "^2.3.0",
+    "styled-components": "^4.4.0"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -40,12 +40,12 @@
     ]
   },
   "devDependencies": {
-    "eslint": "^5.16.0",
-    "eslint-config-prettier": "^4.2.0",
-    "eslint-plugin-prettier": "^3.0.1",
-    "eslint-plugin-react": "^7.13.0",
-    "lint-staged": "^8.1.6",
-    "prettier": "^1.17.0"
+    "eslint": "^6.5.1",
+    "eslint-config-prettier": "^6.3.0",
+    "eslint-plugin-prettier": "^3.1.1",
+    "eslint-plugin-react": "^7.15.0",
+    "lint-staged": "^9.4.1",
+    "prettier": "^1.18.2"
   },
   "husky": {
     "hooks": {
